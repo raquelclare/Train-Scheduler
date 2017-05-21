@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Train Scheduler</title>
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Local CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="jumbotron">
+			<h1>Anytime is Train Time</h1>
+			<h2>Choo Choo. Chee Chee.</h2>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Current Train Schedule</h3>
+					</div>
+					<div class="panel-body" id="well-section">
+						<table class="table" id="train-data">
+							<thead>
+								<tr>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>Frequency (min)</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Add Train</h3>
+					</div>
+					<div class="panel-body" id="add-train">
+						<form>
+							<div class="form-group">
+                                <label for="train-name">Train Name</label>
+                                <input type="text" class="form-control" id="train-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+                            <div class="form-group">
+                                <label for="first-train">First Train Time (HH:mm - military time</label>
+                                <input type="text" class="form-control" id="first-train">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+                            <!-- Button type of submit will allow you to hit enter on your keyboard and have it register in addition to hitting the submit button -->
+                            <button type="submit" class="btn btn-default" id="submitBtn">Sumbit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <!-- Link to Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <!-- Local JS file -->
+	<script type="text/javascript" src="assets/logic.js"></script>
+	<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+</body>
+</html>
