@@ -39,9 +39,9 @@ $("#submitBtn").on("click", function() {
 });
 // Getting the references from the firebase database and creating "snapshots"
 database.ref().on("child_added", function(snapshot) {
-	// Calculate time for next arrival and has to dynamically update on the page
-
-	// Calculate how many minutes away the next train is and has to dynamically update on the page
+	// Function to calculate time for next arrival and has to dynamically update on the page
+	var nextArrival = "";
+	// Function to calculate how many minutes away the next train is and has to dynamically update on the page
 	var minAway = "";
 	// Putting all variables into one variable called fields
 	var fields = snapshot.val();
