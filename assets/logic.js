@@ -54,7 +54,7 @@ $("#submitBtn").on("click", function(event) {
     database.ref().push(newTrain);
 });
 // Getting the references from the firebase database and creating "snapshots"
-database.ref().on("child_added", function(snapshot) {
+database.ref().on("child_added", function(snapshot, prevChildKey) {
 	// Putting all variables into one variable called fields
 	var fields = snapshot.val();
 
