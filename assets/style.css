@@ -1,9 +1,9 @@
 .jumbotron {
 	text-align: right;
-	background-color: rgb(158,181,179);
+	background-color: rgb(83,104,114);
 	color: #fff;
 }
 
-.panel-heading {
+.panel-default>.panel-heading {
 	background-color: rgb(158,181,179);
 }
